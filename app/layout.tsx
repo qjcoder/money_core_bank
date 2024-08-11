@@ -5,10 +5,9 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 const iBMPlexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
-  weight: ['400', '700'],
-  variable: '--font-ibm-plex-serif',
-  
-})
+  weight: ["400", "700"],
+  variable: "--font-ibm-plex-serif",
+});
 
 export const metadata: Metadata = {
   title: "Money Core",
@@ -25,7 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable}${iBMPlexSerif.variable}`}>{children}</body>
+      <body className={`${inter.variable} ${iBMPlexSerif.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
